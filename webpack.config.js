@@ -6,7 +6,7 @@ module.exports = {
   // devtool: 'cheap-module-source-map',
   entry: [
     'webpack-dev-server/client?http://localhost:3000',
-    './app/app'
+    './app/bootstrap'
   ],
   output: {
     path: path.join(__dirname, 'dist'),
