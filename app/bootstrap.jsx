@@ -9,8 +9,3 @@ ReactDOM.render(
     </Layout>
     , document.getElementById('app')
 );
-
-// move router to services
-// add gdrive URL
-// add some images to db with postman
-// style this thing!!

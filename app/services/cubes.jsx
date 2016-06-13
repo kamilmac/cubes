@@ -11,7 +11,7 @@ export default class Cubes {
             return {
                 id: c.ID,
                 title: c.Title,
-                url: `${this.gdriveURL}${c.Suffix}`
+                url: this.gdriveURL + c.Suffix
             }
         });
     };

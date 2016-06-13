@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {observer} from 'mobx-react';
 import {CubeListView} from './cubeList';
+import {CubePreview} from './cubePreview';
 
 @observer
 export class Layout extends Component {
@@ -8,9 +9,20 @@ export class Layout extends Component {
         return (
             <div>
                 <div className='header'>
-                    <div className='title'>Cubes and Squares</div>
+
+                </div>
+                <div className='hero'>
+                    <div className='hero__about'>CUBES AND SQUARES</div>
+                </div>
+                <div className='aboutCubes'>
+                    <div className="bracket">[</div>
+                    <div>
+                        <div className='aboutCubes__header'>3d abstract pretty things</div>
+                        <div className='aboutCubes__desc'>My 3d works modelled with Blender + Octane Lua procedural scripting.</div>
+                    </div>
                 </div>
                 <CubeListView/>
+                <CubePreview/>
             </div>
         );
     }

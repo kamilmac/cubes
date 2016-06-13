@@ -3,6 +3,7 @@ import Cubes from './services/cubes';
 import User from './services/user';
 import TransporterFactory from './services/transporter';
 import Director from './services/director'
+import UI from './services/ui'
 
 const 
 	cubes = new Cubes({
@@ -12,6 +13,7 @@ const
 		gdriveURL: Config.gdrive.baseURL
 	}),
 	user = new User({ cubes, username: 'admin' }),
-	director = new Director({ user });
+	director = new Director({ user }),
+	ui = new UI();
 
-export const Services = { user, cubes, director };
+export const Services = { user, cubes, director, ui };
