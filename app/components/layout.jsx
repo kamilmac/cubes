@@ -37,19 +37,19 @@ export class Compute extends Component {
         this.state = {txt: ''};
     }
     componentWillMount() {
-        let finalText = this.props.text,
-            chars = finalText.split('').filter(char => char!=' ').concat('#','$','%','&','0'),
-            txt = finalText.split('').map(char => ' ');
+        let chars = this.props.text.split('').filter(char => char!=' '),
+            txt = this.props.text.split('').map(char => ' ');
             this.setState({txt: txt.join('')});
         setTimeout(()=>{
             let compute = setInterval(() => {
-                for(let i = 0, l = finalText.length; i < l; i++) {
-                    if(txt[i] != finalText[i] && finalText[i] != ' ') {
+                let new_chars = [];
+                for(let i = 0, l = this.props.text.length; i < l; i++) {
+                    if(txt[i] != this.props.text[i] && this.props.text[i] != ' ') {
                         txt[i] = chars[Math.floor(Math.random() * chars.length)];
                     }
                 }
                 this.setState({txt: txt.join('')});
-                if(finalText == txt.join('')) {
+                if(this.props.text == txt.join('')) {
                     clearInterval(compute);
                 }
             }, 60);
