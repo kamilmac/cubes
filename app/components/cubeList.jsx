@@ -12,8 +12,9 @@ class CubeView extends Component {
     render() {
         return(
             <div className='cube' onClick={this.setPreview.bind(this)}>
-                <div className='cube__img' style={ {backgroundImage: 'url(' + this.cube.url + ')'} }></div>
-                <div className='cube__overlay'>{ this.cube.title }</div>
+                <div className='cube__img' style={ {backgroundImage: 'url(' + this.cube.url + ')'} }>
+                    { this.cube.title }
+                </div>
             </div>
         );
     }

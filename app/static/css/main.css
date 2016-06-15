@@ -5,7 +5,7 @@
     position: fixed;
     top: 0;
     z-index: 10;
-    background: #1f1f1fb8;
+    background: rgba(31, 31, 31, 0.75);
     width: 100%;
     height: 50px;
     display: flex;
@@ -17,6 +17,9 @@
     text-decoration: none;
     padding-left: 25px;
     letter-spacing: 1px;
+}
+.header a:hover {
+    color: #44e89f;
 }
 .header span {
     margin-left: auto;
@@ -42,7 +45,7 @@
     height: 240px;
     width: 240px;
     background: rgba(49, 32, 32, 0.6);
-    color: #44e89f;
+    color: #ececec;
     box-sizing: border-box;
     padding: 10px;
     font-size: 19px;
@@ -52,6 +55,7 @@
     font-weight: 100;
 }
 .cube {
+    position: relative;
 	margin: 0 auto;
 	overflow: hidden;
 	display: flex;
@@ -60,36 +64,33 @@
 }
 .cube__img {
 	box-shadow: 0 0 4px #666;
-	width: 100%;
-	height: 400px;
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: cover;
-	float: left;
-	filter: grayscale(100%);
-	-webkit-filter: grayscale(100%);
-	box-sizing: border-box;
-	margin: 0px;
-	transition: 0.3s;
-	transform: scale(1,1);
+    width: 100%;
+    height: 400px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    float: left;
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+    box-sizing: border-box;
+    margin: 0px;
+    transition: 0.3s;
     cursor: pointer;
+    color: #e2e2e2;
+    text-shadow: 0 0 4px #353535;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-align: center;
+    font-size: 14px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
 }
 .cube__img:hover {
 	transition: 0.3s;
 	filter: grayscale(0%);
 	transform: scale(1.0.4,1.04);
 	-webkit-filter: grayscale(0%);	
-}
-.cube__overlay {
-    position: absolute;
-    display: flex;
-    align-self: center;
-    color: #e2e2e2;
-    font-size: 14px;
-    letter-spacing: 3px;
-    text-align: center;
-    text-shadow: 0 0 4px #353535;
-    text-transform: uppercase;
 }
 .cubePreview {
     position: fixed;
