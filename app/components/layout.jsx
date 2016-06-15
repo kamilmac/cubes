@@ -9,13 +9,14 @@ export class Layout extends Component {
         return (
             <div>
                 <div className='header'>
-                    <a href="">ABOUT</a>
-                    <a href="https://www.linkedin.com/in/kamil-macinski-56b68941" target="_blank">LINKEDIN</a>
-                    <a href="https://github.com/kamilmac" target="_blank">GITHUB</a>
+                    <a href='https://www.linkedin.com/in/kamil-macinski-56b68941' target='_blank'>LINKEDIN</a>
+                    <a href='https://github.com/kamilmac' target='_blank'>GITHUB</a>
                     <span>K.MACINSKI</span>
                 </div>
                 <div className='hero'>
-                    <div className='hero__about'>CUBES AND SQUARES</div>
+                    <div className='hero__about'>
+                        <Compute text='CUBES AND SQUARES' />
+                    </div>
                 </div>
                 <div className='aboutCubes'>
                     <div>
@@ -29,3 +30,36 @@ export class Layout extends Component {
         );
     }
 };
+
+export class Compute extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {txt: ''};
+    }
+    componentWillMount() {
+        let finalText = this.props.text,
+            chars = finalText.split('').filter(char => char!=' ').concat('#','$','%','&','0'),
+            txt = finalText.split('').map(char => ' ');
+            this.setState({txt: txt.join('')});
+        setTimeout(()=>{
+            let compute = setInterval(() => {
+                for(let i = 0, l = finalText.length; i < l; i++) {
+                    if(txt[i] != finalText[i] && finalText[i] != ' ') {
+                        txt[i] = chars[Math.floor(Math.random() * chars.length)];
+                    }
+                }
+                this.setState({txt: txt.join('')});
+                if(finalText == txt.join('')) {
+                    clearInterval(compute);
+                }
+            }, 60);
+        }, 600);
+    };
+    render() {
+        return (
+            <span>
+                {this.state.txt}
+            </span>
+        )
+    }
+}

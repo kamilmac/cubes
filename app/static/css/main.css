@@ -1,5 +1,5 @@
-* {
-    font-family: 'Open Sans', sans-serif;
+html, body {
+    font-family: 'Open Sans', sans-serif !important;
 }
 .header {
     position: fixed;
@@ -40,15 +40,16 @@
 	display: flex;
 }
 .hero__about {
+    font-family: 'Space Mono', monospace;
     display: flex;
     align-self: center;
     height: 240px;
     width: 240px;
     background: rgba(49, 32, 32, 0.6);
-    color: #ececec;
+    color: #6effcc;
     box-sizing: border-box;
     padding: 10px;
-    font-size: 19px;
+    font-size: 17px;
     letter-spacing: 21px;
     line-height: 75px;
     text-align: -webkit-auto;
