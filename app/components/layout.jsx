@@ -9,13 +9,15 @@ export class Layout extends Component {
         return (
             <div>
                 <div className='header'>
-
+                    <a href="">ABOUT</a>
+                    <a href="https://www.linkedin.com/in/kamil-macinski-56b68941" target="_blank">LINKEDIN</a>
+                    <a href="https://github.com/kamilmac" target="_blank">GITHUB</a>
+                    <span>K.MACINSKI</span>
                 </div>
                 <div className='hero'>
                     <div className='hero__about'>CUBES AND SQUARES</div>
                 </div>
                 <div className='aboutCubes'>
-                    <div className="bracket">[</div>
                     <div>
                         <div className='aboutCubes__header'>3d abstract pretty things</div>
                         <div className='aboutCubes__desc'>My 3d works modelled with Blender + Octane Lua procedural scripting.</div>
