@@ -10,9 +10,7 @@ export class Layout extends Component {
         return (
             <div>
                 <div className='header'>
-                    <a href='https://www.linkedin.com/in/kamil-macinski-56b68941' target='_blank'>LINKEDIN</a>
-                    <a href='https://github.com/kamilmac' target='_blank'>GITHUB</a>
-                    <span>K.MACINSKI</span>
+                    <a href='https://kamilmac.github.io' target='_blank'>KAMIL.MAC</a>
                 </div>
                 <div className='hero'>
                     <div className='hero__about'>
