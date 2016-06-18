@@ -9,7 +9,7 @@ export class ComputeText extends Component {
         let chars = this.props.text.split('').filter(char => char!=' '),
             txt = this.props.text.split('').map(char => ' ');
             this.setState({txt: txt.join('')});
-        setTimeout(()=>{
+        setTimeout(() => {
             let compute = setInterval(() => {
                 let new_chars = [];
                 for(let i = 0, l = this.props.text.length; i < l; i++) {

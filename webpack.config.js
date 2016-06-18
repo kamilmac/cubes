@@ -2,8 +2,8 @@ var path = require('path');
 var webpack = require('webpack');
 
 module.exports = {
-  devtool: 'eval',
-  // devtool: 'cheap-module-source-map',
+  // devtool: 'eval',
+  devtool: 'cheap-module-source-map',
   entry: [
     'webpack-dev-server/client?http://localhost:3000',
     './app/bootstrap'
@@ -24,11 +24,11 @@ module.exports = {
       include: path.join(__dirname, 'app')
     }]
   },
-  // plugins: [
-  //   new webpack.DefinePlugin({
-  //     'process.env': {
-  //       'NODE_ENV': JSON.stringify('production')
-  //     }
-  //   }),
-  // ],
+  plugins: [
+    new webpack.DefinePlugin({
+      'process.env': {
+        'NODE_ENV': JSON.stringify('production')
+      }
+    }),
+  ]
 };
